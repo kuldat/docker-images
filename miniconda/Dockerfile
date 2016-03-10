@@ -17,12 +17,12 @@ RUN apt-get update && apt-get install -y \
     software-properties-common \
   && rm -rf /var/lib/apt/lists/*
 
-RUN pip install virtualenv;
-
 RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
     wget -q http://repo.continuum.io/miniconda/Miniconda-3.7.3-Linux-x86_64.sh && \
     /bin/bash Miniconda-3.7.3-Linux-x86_64.sh -b -p /opt/conda && \
     rm Miniconda-3.7.3-Linux-x86_64.sh
+
+RUN conda install pip --yes
 
 ENV PATH /opt/conda/bin:$PATH
 
