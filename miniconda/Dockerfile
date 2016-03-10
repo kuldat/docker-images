@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
     python-pip \
     wget \
     libpq-dev \
+    libxml2-dev \
+    libxslt-dev \
     software-properties-common \
   && rm -rf /var/lib/apt/lists/*
 
