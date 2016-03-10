@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     python-dev \
     python-pip \
     wget \
+    libpq-dev \
     software-properties-common \
   && rm -rf /var/lib/apt/lists/*
 
