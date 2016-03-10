@@ -8,7 +8,7 @@ RUN locale-gen en_US en_US.UTF-8 && \
 RUN apt-get update && apt-get install -y \
     build-essential \
     git-core \
-    pyrhon-dev \
+    python-dev \
     python-pip \
     software-properties-common \
   && rm -rf /var/lib/apt/lists/*
